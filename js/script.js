@@ -352,7 +352,8 @@ alertButtons.forEach((button) => {
     showFeedback("No new notifications");
   });
 });
-});
+
 
 // --- Set initial dashboard panel ---
 setPanel("home");
+});
