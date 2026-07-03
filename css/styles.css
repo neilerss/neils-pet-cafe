@@ -33,14 +33,14 @@ input {
   height: 100vh;
   padding: 0;
   display: grid;
-  place-items: center;
+  place-items: stretch;
 }
 
 .auth-screen {
   width: 100%;
   height: 100%;
   display: grid;
-  place-items: center;
+  place-items: stretch;
 }
 
 .hidden {
@@ -54,10 +54,10 @@ input {
 .auth-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: min(900px, calc(100vw - 32px));
-  height: min(640px, calc(100vh - 32px));
-  margin: 0 auto;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  box-shadow: none;
 }
 
 .form-side {
@@ -69,7 +69,7 @@ input {
 
 .form-box {
   width: 174px;
-  transform: translateY(-34px);
+  transform: none;
 }
 
 .form-box h1 {
