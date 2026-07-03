@@ -10,7 +10,7 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -18,20 +18,17 @@ body {
 
 .auth-body {
     min-height: 100vh;
+    background-color: #2c1810; /* Change to your color */
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-button,
-input {
-  font: inherit;
 }
 
 .auth-shell {
     width: 100%;
     max-width: 1040px;
     height: 100vh;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
