@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Settings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="admin-body">
+    <main class="admin-app admin-page">
+      <aside class="admin-sidebar">
+        <a class="admin-brand" href="admin.html"><span class="brand-logo-wrap"><img src="assets/logo.png" alt="" /></span><span>NEIL'S PET<br />CAFE</span></a>
+        <nav class="admin-nav"><a href="admin.html">Dashboard</a><a href="admin-users.html">User Management</a><a href="admin-records.html">System Records</a><a href="admin-approvals.html">Approvals</a><a href="admin-reports.html">Reports</a><a class="active" href="admin-settings.html">Settings</a></nav>
+        <section class="admin-profile"><img src="assets/user-pfp.png" alt="" /><div><strong>ADMIN</strong><span>Johndoe@gmail.com</span><a href="profile.html">Edit profile</a><a href="index.html">LOGOUT</a></div></section>
+      </aside>
+      <section class="admin-workspace admin-board">
+        <header class="admin-page-header"><h1>Settings</h1><button class="admin-bell" aria-label="Notifications"></button></header>
+        <section class="admin-page-content settings-stack">
+          <article class="admin-card settings-panel">
+            <h2>Admin Profile</h2>
+            <div class="settings-form-grid"><label>FIRST NAME<input value="John" /></label><label>LAST NAME<input /></label><label class="full">EMAIL ADDRESS<input value="Johndoe@gmail.com" /></label></div>
+            <button class="save-btn">SAVE CHANGES</button>
+          </article>
+          <article class="admin-card settings-panel"><h2>System Preferences</h2><div class="toggle-row"><p><strong>Maintenance mode</strong><small>Shows a maintenance page to guests</small></p><span></span></div><div class="toggle-row"><p><strong>Require deposit on booking</strong><small>Charge via Stripe when a reservation is submitted.</small></p><span></span></div><div class="toggle-row"><p><strong>Auto-approve loyal regulars</strong><small>Skip the queue for returning frequent guests.</small></p><span></span></div></article>
+          <article class="admin-card settings-panel"><h2>Notifications</h2><div class="toggle-row"><p>New reservations submitted</p><span></span></div><div class="toggle-row"><p>Reservation approved / rejected</p><span></span></div><div class="toggle-row"><p>Payment failure alert</p><span></span></div><div class="toggle-row"><p>Role change request</p><span></span></div></article>
+          <article class="admin-card settings-panel"><h2>Role Permissions</h2><div class="toggle-row"><p>Staff can approve reservations</p><span></span></div><div class="toggle-row"><p>Staff can manage menu items</p><span></span></div><div class="toggle-row"><p>Staff can view reports</p><span></span></div><div class="toggle-row"><p>Role change request</p><span></span></div></article>
+          <article class="admin-card settings-panel danger-zone"><h2>Danger Zone</h2><div class="danger-row"><span>Reset all pending requests</span><button>Clear</button></div><div class="danger-row"><span>Deactivate all inactive users (90+ days)</span><button>Run</button></div></article>
+        </section>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

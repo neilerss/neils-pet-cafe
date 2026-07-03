@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="reservation-body">
+    <p class="page-caption">Menu</p>
+    <main class="reservation-app">
+      <aside class="sidebar reservation-sidebar">
+        <a class="sidebar-brand reservation-brand" href="dashboard.html"><span class="brand-logo-wrap"><img src="assets/logo.png" alt="" /></span><span>NEIL'S PET<br />CAFE</span></a>
+        <nav class="side-nav reservation-nav">
+          <a class="nav-item" href="dashboard.html">Dashboard/Home</a>
+          <a class="nav-item" href="reservation.html">Calendar/Reservation</a>
+          <a class="nav-item active" href="menu.html">Menu</a>
+          <a class="nav-item" href="announcements.html">Announcements</a>
+          <a class="nav-item" href="activity.html">My Activity/Orders</a>
+        </nav>
+        <div class="sidebar-profile reservation-profile"><img src="assets/user-pfp.png" alt="" /><div><strong>johndoe@gmail.com</strong><a href="profile.html">Edit profile</a><a href="index.html">LOGOUT</a></div></div>
+        <div class="sidebar-footer reservation-footer"><p>Need help? Contact:</p><span>johndoe@gmail.com</span><strong>XX-XXX-XXXX-XX</strong></div>
+      </aside>
+      <section class="simple-main menu-main">
+        <a class="page-back-button" href="dashboard.html" aria-label="Back to dashboard"><span aria-hidden="true">&#8592;</span></a>
+        <span class="res-paw res-paw-one"></span>
+        <span class="res-paw res-paw-three"></span>
+        <section class="menu-page-card">
+          <img src="assets/menu-card.png" alt="Neil's Pet Cafe menu" />
+          <div class="menu-tabs">
+            <button type="button" class="active">Coffee</button>
+            <button type="button">Non-Coffee</button>
+          </div>
+          <div class="menu-tags">
+            <span>Americano</span>
+            <span>Cappucino</span>
+            <span>Espresso</span>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="reservation-body">
+    <p class="page-caption">Basic profile/account settings</p>
+    <main class="reservation-app">
+      <aside class="sidebar reservation-sidebar">
+        <a class="sidebar-brand reservation-brand" href="dashboard.html"><span class="brand-logo-wrap"><img src="assets/logo.png" alt="" /></span><span>NEIL'S PET<br />CAFE</span></a>
+        <nav class="side-nav reservation-nav">
+          <a class="nav-item" href="dashboard.html">Dashboard/Home</a>
+          <a class="nav-item" href="reservation.html">Calendar/Reservation</a>
+          <a class="nav-item" href="menu.html">Menu</a>
+          <a class="nav-item" href="announcements.html">Announcements</a>
+          <a class="nav-item" href="activity.html">My Activity/Orders</a>
+        </nav>
+        <div class="sidebar-profile reservation-profile"><img src="assets/user-pfp.png" alt="" /><div><strong>johndoe@gmail.com</strong><a href="profile.html">Edit profile</a><a href="index.html">LOGOUT</a></div></div>
+        <div class="sidebar-footer reservation-footer"><p>Need help? Contact:</p><span>johndoe@gmail.com</span><strong>XX-XXX-XXXX-XX</strong></div>
+      </aside>
+      <section class="simple-main">
+        <a class="page-back-button" href="dashboard.html" aria-label="Back to dashboard"><span aria-hidden="true">&#8592;</span></a>
+        <section class="settings-card">
+          <h1>Edit profile changes</h1>
+          <form class="reservation-form">
+            <div class="form-row name-row"><label>Name:</label><div class="stacked-inputs"><input type="text" placeholder="First name" /><input type="text" placeholder="Last name" /></div></div>
+            <div class="form-row"><label>Change password:</label><input type="password" /></div>
+            <div class="form-row"><label>Confirm change:</label><input type="password" /></div>
+            <div class="form-row"><label>Notification Preferences:</label><div class="required-field select-field"><select><option>Please select</option><option>Email</option><option>SMS</option><option>None</option></select></div></div>
+            <button class="reserve-submit" type="submit">SAVE</button>
+          </form>
+        </section>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

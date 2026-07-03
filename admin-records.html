@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin System Records</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="admin-body">
+    <main class="admin-app admin-page">
+      <aside class="admin-sidebar"><a class="admin-brand" href="admin.html"><span class="brand-logo-wrap"><img src="assets/logo.png" alt="" /></span><span>NEIL'S PET<br />CAFE</span></a><nav class="admin-nav"><a href="admin.html">Dashboard</a><a href="admin-users.html">User Management</a><a class="active" href="admin-records.html">System Records</a><a href="admin-approvals.html">Approvals</a><a href="admin-reports.html">Reports</a><a href="admin-settings.html">Settings</a></nav><section class="admin-profile"><img src="assets/user-pfp.png" alt="" /><div><strong>ADMIN</strong><span>Johndoe@gmail.com</span><a href="profile.html">Edit profile</a><a href="index.html">LOGOUT</a></div></section></aside>
+      <section class="admin-workspace admin-board">
+        <header class="admin-page-header"><h1>System Records</h1><button class="admin-bell" aria-label="Notifications"></button></header>
+        <section class="admin-page-content">
+          <section class="admin-kpis"><article><span>TOTAL RESERVATIONS:</span><strong>1482</strong><small>Reservations</small></article><article><span>TOTAL ORDERS:</span><strong>3241</strong><small>Orders</small></article><article><span>MENU ITEMS:</span><strong>34</strong><small>Menu Items</small></article><article><span>PETS ON RECORD:</span><strong>18</strong><small>Pets</small></article></section>
+          <section class="records-grid">
+            <article class="admin-card history-card"><div class="admin-card-head"><h2>Orders</h2><button>Export CSV</button></div><table class="admin-data-table"><thead><tr><th>ORDER ID</th><th>ITEMS</th><th>TOTAL</th><th>STATUS</th><th>ACTIONS</th></tr></thead><tbody><tr><td>#ORD-1041</td><td>Iced Latte, Cat Pancake</td><td>₱285</td><td><span class="badge approved">Served</span></td><td>View Edit</td></tr><tr><td>#ORD-1039</td><td>Matcha, Croissant ×2</td><td>₱410</td><td><span class="badge approved">Approved</span></td><td>View Edit</td></tr><tr><td>#ORD-1040</td><td>Hot Choco</td><td>₱120</td><td><span class="badge rejected">Cancelled</span></td><td>View Edit</td></tr></tbody></table></article>
+            <article class="admin-card history-card"><div class="admin-card-head"><h2>Menu Items</h2><button>Add Item</button></div><table class="admin-data-table"><thead><tr><th>ITEM ID</th><th>NAME</th><th>CATEGORY</th><th>PRICE</th><th>AVAILABLE</th></tr></thead><tbody><tr><td>#ITM-01</td><td>Iced Latte</td><td>Coffee</td><td>₱165</td><td>Yes</td></tr><tr><td>#ITM-02</td><td>Matcha Latte</td><td>Non-Coffee</td><td>₱175</td><td>Yes</td></tr><tr><td>#ITM-03</td><td>Cat-Shaped Pancake</td><td>Snack</td><td>₱175</td><td>No</td></tr></tbody></table></article>
+            <article class="admin-card history-card"><div class="admin-card-head"><h2>Pets</h2><button>Add Pet</button></div><table class="admin-data-table"><thead><tr><th>PET ID</th><th>NAME</th><th>SPECIES</th><th>AGE</th><th>TRAITS</th><th>STATUS</th></tr></thead><tbody><tr><td>#PET-01</td><td>Mochi</td><td>Cat</td><td>2 yrs</td><td>Energetic, Friendly</td><td><span class="badge approved">Active</span></td></tr><tr><td>#PET-02</td><td>Oreo</td><td>Cat</td><td>2 yrs</td><td>Calm, Cuddly</td><td><span class="badge approved">Active</span></td></tr><tr><td>#PET-04</td><td>Bantay</td><td>Dog</td><td>2 yrs</td><td>Serious</td><td><span class="badge pending">Resting</span></td></tr></tbody></table></article>
+          </section>
+        </section>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

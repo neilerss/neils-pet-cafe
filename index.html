@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neil's Pet Cafe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="auth-body">
+    <main class="auth-shell">
+      <section class="auth-screen" id="login-screen">
+        <p class="screen-title">Login</p>
+
+        <div class="auth-card">
+          <section class="form-side">
+            <div class="form-box">
+              <h1>LOGIN</h1>
+              <p>Please enter your details</p>
+
+              <form class="auth-form">
+                <label for="login-email">Email Address</label>
+                <input id="login-email" type="email" />
+
+                <label for="login-password">Password</label>
+                <input id="login-password" type="password" />
+
+                <button class="forgot-link" type="button" data-message="Password reset link sent">Forgot Password?</button>
+                <button type="submit">SIGN IN</button>
+              </form>
+
+              <button class="switch-link" type="button" data-screen="register">
+                Dont have an account? sign in
+              </button>
+            </div>
+          </section>
+
+          <section class="brand-side">
+            <span class="paw paw-top"></span>
+            <span class="paw paw-left"></span>
+            <span class="paw paw-middle"></span>
+            <span class="paw paw-bottom"></span>
+            <span class="paw paw-corner"></span>
+
+            <div class="logo-circle">
+              <img src="assets/logo.png" alt="" />
+            </div>
+
+            <h2>WELCOME TO<br />NEIL'S PET CAFE</h2>
+          </section>
+        </div>
+      </section>
+
+      <section class="auth-screen hidden" id="register-screen">
+        <p class="screen-title">Registration</p>
+
+        <div class="auth-card">
+          <section class="brand-side">
+            <button class="back-button" type="button" data-screen="login">
+              <span aria-hidden="true">&#8592;</span>
+              <span class="visually-hidden">Back to login</span>
+            </button>
+
+            <span class="paw paw-top"></span>
+            <span class="paw paw-left"></span>
+            <span class="paw paw-middle"></span>
+            <span class="paw paw-bottom"></span>
+            <span class="paw paw-corner"></span>
+
+            <div class="logo-circle">
+              <img src="assets/logo.png" alt="" />
+            </div>
+
+            <h2>WELCOME TO<br />NEIL'S PET CAFE</h2>
+          </section>
+
+          <section class="form-side">
+            <div class="form-box register-box">
+              <h1>REGISTRATION</h1>
+              <p>Please enter your details</p>
+
+              <form class="auth-form">
+                <label for="name">Name</label>
+                <input id="name" type="text" />
+
+                <label for="email">Email Address</label>
+                <input id="email" type="email" />
+
+                <label for="password">Password</label>
+                <input id="password" type="password" />
+
+                <label for="confirm-password">Confirm password</label>
+                <input id="confirm-password" type="password" />
+
+                <button type="submit">SIGN IN</button>
+              </form>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

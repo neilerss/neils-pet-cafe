@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neil's Pet Cafe Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="dashboard-body">
+    <main class="dashboard-app reservation-app">
+      <aside class="sidebar reservation-sidebar">
+        <a class="sidebar-brand reservation-brand" href="dashboard.html" aria-label="Neil's Pet Cafe home">
+          <span class="brand-logo-wrap"><img src="assets/logo.png" alt="" /></span>
+          <span>NEIL'S PET<br />CAFE</span>
+        </a>
+
+        <nav class="side-nav reservation-nav" aria-label="Dashboard navigation">
+          <a class="nav-item active" href="dashboard.html">Dashboard/Home</a>
+          <a class="nav-item" href="reservation.html">Calendar/Reservation</a>
+          <a class="nav-item" href="menu.html">Menu</a>
+          <a class="nav-item" href="announcements.html">Announcements</a>
+          <a class="nav-item" href="activity.html">My Activity/Orders</a>
+        </nav>
+
+        <div class="sidebar-profile reservation-profile">
+          <img src="assets/user-pfp.png" alt="" />
+          <div>
+            <strong>Johndoe@gmail.com</strong>
+            <a href="profile.html">Edit profile</a>
+            <a class="logout-link" href="index.html">LOGOUT</a>
+          </div>
+        </div>
+
+        <div class="sidebar-footer reservation-footer">
+          <p>Need help? Contact:</p>
+          <span>johndoe@gmail.com</span>
+          <strong>XX-XXX-XXXX-XX</strong>
+        </div>
+      </aside>
+
+      <section class="dashboard-main">
+        <header class="topbar">
+          <div class="search-wrap">
+            <input id="dashboard-search" type="search" placeholder="Search" />
+            <button class="filter-button" type="button" aria-label="Show filters" data-toggle-filter>
+              <span></span>
+            </button>
+            <div class="filter-menu hidden" id="filter-menu">
+              <button type="button" data-filter="coffee">Coffee</button>
+              <button type="button" data-filter="non-coffee">Non-Coffee</button>
+            </div>
+            <div class="search-results hidden" id="search-results" aria-live="polite"></div>
+          </div>
+
+          <button class="alert-button" type="button" aria-label="Notifications">
+            <span></span>
+          </button>
+        </header>
+
+        <section class="dashboard-stage" aria-label="Dashboard home">
+          <div class="welcome-copy">
+            <h1>Welcome<br />John Doe!</h1>
+          </div>
+
+          <img class="dashboard-cat-image" src="assets/dashboard-cat.png" alt="" />
+
+          <div class="feature-cards" aria-label="Main actions">
+            <button class="feature-card" type="button" data-feature="pets">
+              CHECK OUT<br />OUR PETS!
+            </button>
+
+            <a class="menu-preview" href="menu.html" aria-label="Open menu">
+              <img src="assets/menu-card.png" alt="" />
+            </a>
+
+            <button class="feature-card" type="button" data-go="reservation.html">
+              RESERVE A<br />SPOT
+            </button>
+          </div>
+        </section>
+
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

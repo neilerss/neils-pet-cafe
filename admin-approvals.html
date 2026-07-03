@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Approvals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="admin-body">
+    <main class="admin-app admin-page">
+      <aside class="admin-sidebar">
+        <a class="admin-brand" href="admin.html"><span class="brand-logo-wrap"><img src="assets/logo.png" alt="" /></span><span>NEIL'S PET<br />CAFE</span></a>
+        <nav class="admin-nav">
+          <a href="admin.html">Dashboard</a>
+          <a href="admin-users.html">User Management</a>
+          <a href="admin-records.html">System Records</a>
+          <a class="active" href="admin-approvals.html">Approvals</a>
+          <a href="admin-reports.html">Reports</a>
+          <a href="admin-settings.html">Settings</a>
+        </nav>
+        <section class="admin-profile"><img src="assets/user-pfp.png" alt="" /><div><strong>ADMIN</strong><span>Johndoe@gmail.com</span><a href="profile.html">Edit profile</a><a href="index.html">LOGOUT</a></div></section>
+      </aside>
+
+      <section class="admin-workspace admin-board">
+        <header class="admin-page-header"><h1>Approvals</h1><button class="admin-bell" aria-label="Notifications"></button></header>
+        <section class="admin-page-content">
+          <section class="admin-kpis">
+            <article><span>TOTAL PENDING</span><strong>8</strong><small>Needs review</small></article>
+            <article><span>APPROVED<br />TODAY:</span><strong>1091</strong><small>Since midnight</small></article>
+            <article><span>REJECTED<br />TODAY:</span><strong>23</strong><small>Since midnight</small></article>
+            <article><span>AVG RESPONSE<br />TIME:</span><strong>1091</strong><small>Last 7 days</small></article>
+          </section>
+
+          <section class="approval-layout">
+            <article class="admin-card approval-queue-card">
+              <div class="admin-card-head"><h2>Approval Queue:</h2><span>5 Pending</span></div>
+              <div class="approval-row"><b>DD</b><p><strong>Deni Dela Cruz</strong><small>Reservation · Apr 20 · 2:00PM 3 Guests</small></p><button>Approve</button><button>Reject</button></div>
+              <div class="approval-row"><b>RC</b><p><strong>Ronah Joy Calamares</strong><small>Reservation · Apr 20 · 4:30PM 2 Guests</small></p><button>Approve</button><button>Reject</button></div>
+              <div class="approval-row"><b>HD</b><p><strong>Haven Joy Day Hola</strong><small>Reservation · Apr 21 · 11:00AM 5 Guests</small></p><button>Approve</button><button>Reject</button></div>
+              <div class="approval-row"><b>AB</b><p><strong>Alliyah Shane Broa</strong><small>Reservation · Apr 21 · 12:00PM 2 Guests</small></p><button>Approve</button><button>Reject</button></div>
+              <div class="approval-row"><b>BW</b><p><strong>Bob Wade Markiplier</strong><small>Reservation · Apr 21 · 2:00PM 3 Guests</small></p><button>Approve</button><button>Reject</button></div>
+            </article>
+
+            <div class="approval-side-stack">
+              <article class="admin-card">
+                <div class="admin-card-head"><h2>Pending Role Requests</h2><span>2 Pending</span></div>
+                <div class="approval-row"><b>AB</b><p><strong>Alliyah Shane Broa</strong><small>Requests: User -> Admin · Submitted Dec 5</small></p><button>Approve</button><button>Reject</button></div>
+                <div class="approval-row"><b>KN</b><p><strong>Kirzten Nicole</strong><small>Requests: User -> Admin · Submitted Jan 24</small></p><button>Approve</button><button>Reject</button></div>
+              </article>
+
+              <article class="admin-card recent-admin-activity">
+                <h2>Recent Activity</h2>
+                <p>Approved - Jane Dela Cruz (RES-487)<br /><small>Today · 9:14 AM</small></p>
+                <p>Rejected - Kevin Tan (RES-486)<br /><small>Yesterday · 4:02 PM</small></p>
+                <p>Approved - Ana Santos (RES-485)<br /><small>May 15 · 1:32 PM</small></p>
+                <p>Role granted - Maria Santos -> Admin<br /><small>May 14 · 11:00 AM</small></p>
+              </article>
+            </div>
+          </section>
+
+          <article class="admin-card history-card">
+            <div class="admin-card-head"><h2>All Requests - History:</h2><button>Export</button></div>
+            <div class="admin-tool-row"><input type="search" placeholder="Search Users" /><select><option>All Types</option></select><select><option>All Status</option></select></div>
+            <table class="admin-data-table">
+              <thead><tr><th>REQUEST ID</th><th>USER</th><th>TYPE</th><th>SUBMITTED</th><th>APPROVED BY</th><th>STATUS</th></tr></thead>
+              <tbody>
+                <tr><td>#REQ-101</td><td>Lex Tsuki</td><td>Reservation</td><td>April 21</td><td>Admin Neil A.</td><td><span class="badge approved">Approved</span></td></tr>
+                <tr><td>#REQ-100</td><td>Josh Gusion</td><td>Reservation</td><td>April 21</td><td>Admin Neil A.</td><td><span class="badge rejected">Rejected</span></td></tr>
+                <tr><td>#REQ-99</td><td>Joshvyn Leomord</td><td>Role Change</td><td>April 20</td><td>---</td><td><span class="badge pending">Pending</span></td></tr>
+                <tr><td>#REQ-98</td><td>Juna Kimmy</td><td>Role Change</td><td>April 20</td><td>Admin Neil A.</td><td><span class="badge approved">Approved</span></td></tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

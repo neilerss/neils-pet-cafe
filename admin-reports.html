@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Reports</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="admin-body">
+    <main class="admin-app admin-page">
+      <aside class="admin-sidebar">
+        <a class="admin-brand" href="admin.html"><span class="brand-logo-wrap"><img src="assets/logo.png" alt="" /></span><span>NEIL'S PET<br />CAFE</span></a>
+        <nav class="admin-nav"><a href="admin.html">Dashboard</a><a href="admin-users.html">User Management</a><a href="admin-records.html">System Records</a><a href="admin-approvals.html">Approvals</a><a class="active" href="admin-reports.html">Reports</a><a href="admin-settings.html">Settings</a></nav>
+        <section class="admin-profile"><img src="assets/user-pfp.png" alt="" /><div><strong>ADMIN</strong><span>Johndoe@gmail.com</span><a href="profile.html">Edit profile</a><a href="index.html">LOGOUT</a></div></section>
+      </aside>
+      <section class="admin-workspace admin-board">
+        <header class="admin-page-header"><h1>Reports & Analytics</h1><button class="admin-bell" aria-label="Notifications"></button></header>
+        <section class="admin-page-content">
+          <section class="admin-kpis"><article><span>REVENUE (APR):</span><strong>8</strong><small>Needs review</small></article><article><span>TOTAL VISITS<br />(APR):</span><strong>1091</strong><small>Since midnight</small></article><article><span>AVG. ORDER<br />VALUE:</span><strong>23</strong><small>Since midnight</small></article><article><span>CANCELLATION<br />RATE:</span><strong>1091</strong><small>Last 7 days</small></article></section>
+          <section class="reports-grid">
+            <article class="admin-card chart-card"><div class="admin-card-head"><h2>Monthly Reservations:</h2><span>Bar chart</span></div><div class="monthly-bars"><i style="--h:63%">218</i><i style="--h:70%">241</i><i style="--h:80%">276</i><i style="--h:84%">289</i><i style="--h:100%">312</i></div><div class="chart-labels"><span>Mon</span><span>Tues</span><span>Wed</span><span>Thurs</span><span>Fri</span></div></article>
+            <article class="admin-card chart-card"><div class="admin-card-head"><h2>Top Menu Items by Orders</h2><span>This Month</span></div><div class="rank-bars"><p><span>Iced Latte</span><b style="--w:100%"></b><em>184</em></p><p><span>Matcha Latte</span><b style="--w:82%"></b><em>155</em></p><p><span>Cat Pancake</span><b style="--w:64%"></b><em>126</em></p><p><span>Americano</span><b style="--w:45%"></b><em>100</em></p><p><span>Croissant</span><b style="--w:35%"></b><em>79</em></p></div></article>
+            <article class="admin-card chart-card"><h2>User Engagement by Tier</h2><div class="rank-bars tier-bars"><p><span>Loyal Regular</span><b class="mint" style="--w:45%"></b><em>142</em></p><p><span>Casual Visitor</span><b style="--w:100%"></b><em>601</em></p><p><span>Group Booker</span><b class="mint" style="--w:62%"></b><em>54</em></p><p><span>Lapsed User</span><b class="red" style="--w:22%"></b><em>87</em></p></div></article>
+            <article class="admin-card chart-card donut-wrap"><h2>Top Menu Items by Orders</h2><div class="donut-chart"></div><ul><li>Approved 70%</li><li>Pending 18%</li><li>Rejected 12%</li></ul></article>
+          </section>
+          <article class="admin-card report-generator"><div class="admin-card-head"><h2>Generate Report</h2><div><button>Export PDF</button><button>Export CSV</button></div></div><select><option>All Reports Type</option></select><select><option>Date Range</option></select><select><option>All Users</option></select><button>Generate</button><table class="admin-data-table"><thead><tr><th>PERIOD</th><th>RESERVATIONS</th><th>ORDERS</th><th>REVENUE</th><th>NEW USERS</th><th>CANCELLATIONS</th></tr></thead><tbody><tr><td>Apr 2026</td><td>312</td><td>784</td><td>₱84,210</td><td>38</td><td>23</td></tr><tr><td>Mar 2026</td><td>289</td><td>694</td><td>₱75,180</td><td>29</td><td>31</td></tr><tr><td>Feb 2026</td><td>276</td><td>651</td><td>₱70,440</td><td>22</td><td>28</td></tr><tr><td>Jan 2026</td><td>241</td><td>570</td><td>₱61,290</td><td>18</td><td>25</td></tr></tbody></table></article>
+        </section>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin User Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="admin-body">
+    <main class="admin-app admin-page">
+      <aside class="admin-sidebar"><a class="admin-brand" href="admin.html"><span class="brand-logo-wrap"><img src="assets/logo.png" alt="" /></span><span>NEIL'S PET<br />CAFE</span></a><nav class="admin-nav"><a href="admin.html">Dashboard</a><a class="active" href="admin-users.html">User Management</a><a href="admin-records.html">System Records</a><a href="admin-approvals.html">Approvals</a><a href="admin-reports.html">Reports</a><a href="admin-settings.html">Settings</a></nav><section class="admin-profile"><img src="assets/user-pfp.png" alt="" /><div><strong>ADMIN</strong><span>Johndoe@gmail.com</span><a href="profile.html">Edit profile</a><a href="index.html">LOGOUT</a></div></section></aside>
+      <section class="admin-workspace admin-board">
+        <header class="admin-page-header"><h1>User Management</h1><button class="admin-bell" aria-label="Notifications"></button></header>
+        <section class="admin-page-content">
+          <section class="admin-kpis"><article><span>Total users:</span><strong>1284</strong><small>+12 this week</small></article><article><span>Active users:</span><strong>1091</strong><small>84.7% active rate</small></article><article><span>Pending requests:</span><strong>23</strong><small>↑ 8 than yesterday</small></article><article><span>Approval Queue:</span><strong>5</strong><small>Pending</small></article></section>
+          <article class="admin-card history-card"><div class="admin-card-head"><h2>Users</h2><button>+Add Users</button></div><div class="admin-tool-row"><input type="search" placeholder="Search Users" /><select><option>All Status</option></select><select><option>All Roles</option></select></div><table class="admin-data-table"><thead><tr><th>NAME</th><th>EMAIL</th><th>ROLE</th><th>STATUS</th><th>LAST ACTIVE</th><th>ACTIONS</th></tr></thead><tbody><tr><td>Aliyah Shane</td><td>AliyahShane@email.com</td><td>User</td><td><span class="badge approved">Active</span></td><td>Sept 15, 2025</td><td>View Edit Deactivate</td></tr><tr><td>Neil Zhann</td><td>NeilZhann@email.com</td><td>Admin</td><td><span class="badge approved">Active</span></td><td>July 11, 2025</td><td>View Edit Deactivate</td></tr><tr><td>Cadgoat Jas</td><td>CadgoatJas@email.com</td><td>User</td><td><span class="badge rejected">Inactive</span></td><td>Jan 1, 2026</td><td>View Edit Activate</td></tr><tr><td>Danah Eryka</td><td>DanahEryka@email.com</td><td>User</td><td><span class="badge approved">Active</span></td><td>Apr 18, 2026</td><td>View Edit Deactivate</td></tr></tbody></table></article>
+        </section>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

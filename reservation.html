@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar Reservation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="reservation-body">
+    <p class="page-caption">Calendar/Reservation</p>
+
+    <main class="reservation-app">
+      <aside class="sidebar reservation-sidebar">
+        <a class="sidebar-brand reservation-brand" href="dashboard.html" aria-label="Neil's Pet Cafe home">
+          <span class="brand-logo-wrap"><img src="assets/logo.png" alt="" /></span>
+          <span>NEIL'S PET<br />CAFE</span>
+        </a>
+
+        <nav class="side-nav reservation-nav" aria-label="Reservation navigation">
+          <a class="nav-item" href="dashboard.html">Dashboard/Home</a>
+          <a class="nav-item active" href="reservation.html">Calendar/Reservation</a>
+          <a class="nav-item" href="menu.html">Menu</a>
+          <a class="nav-item" href="announcements.html">Announcements</a>
+          <a class="nav-item" href="activity.html">My Activity/Orders</a>
+        </nav>
+
+        <div class="sidebar-profile reservation-profile">
+          <img src="assets/user-pfp.png" alt="" />
+          <div>
+            <strong>johndoe@gmail.com</strong>
+            <span>Edit profile</span>
+            <a href="profile.html">Edit profile</a>
+            <a href="index.html">LOGOUT</a>
+          </div>
+        </div>
+
+      <section class="reservation-main">
+        <a class="page-back-button" href="dashboard.html" aria-label="Back to dashboard">
+          <span aria-hidden="true">&#8592;</span>
+        </a>
+
+        <span class="res-paw res-paw-one"></span>
+        <span class="res-paw res-paw-two"></span>
+        <span class="res-paw res-paw-three"></span>
+
+        <section class="reservation-card" aria-labelledby="reservation-title">
+          <h1 id="reservation-title">RESERVATIONS</h1>
+
+          <form class="reservation-form reservation-booking">
+            <div class="form-row name-row">
+              <label>Name:</label>
+              <div class="stacked-inputs">
+                <div class="required-field">
+                  <input type="text" placeholder="First name" />
+                  <span>*</span>
+                </div>
+                <input type="text" placeholder="Last name" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Phone Number:</label>
+              <div class="required-field">
+                <input id="phone" type="tel" />
+                <span>*</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="guests">Number of Guests:</label>
+              <div class="required-field">
+                <input id="guests" type="number" min="1" />
+                <span>*</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="date">Date:</label>
+              <div class="required-field select-field">
+                <input id="date" type="text" placeholder="DD/MM/YEAR" />
+                <span>*</span>
+                <button type="button" aria-label="Open date menu"></button>
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="form-row">
+              <label for="reservation-type">Reservation Type:</label>
+              <div class="required-field select-field">
+                <select id="reservation-type">
+                  <option>Please select</option>
+                  <option>Table reservation</option>
+                  <option>Pet play session</option>
+                  <option>Birthday event</option>
+                </select>
+                <span>*</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="requests">Special Requests:</label>
+              <input id="requests" type="text" />
+            </div>
+
+            <button class="reserve-submit" type="submit">RESERVE</button>
+          </form>
+        </section>
+
+        <section class="calendar-card" aria-label="Calendar">
+          <div class="calendar-toolbar">
+            <button type="button" aria-label="Previous month">&#8249;</button>
+            <input type="text" value="Sep" aria-label="Month" />
+            <input type="text" value="2025" aria-label="Year" />
+            <button type="button" aria-label="Next month">&#8250;</button>
+          </div>
+
+          <div class="calendar-grid">
+            <span>Su</span>
+            <span>Mo</span>
+            <span>Tu</span>
+            <span>We</span>
+            <span>Th</span>
+            <span>Fr</span>
+            <span>Sa</span>
+            <b></b>
+            <b>1</b>
+            <b>2</b>
+            <b>3</b>
+            <b>4</b>
+            <b>5</b>
+            <b>6</b>
+            <b>7</b>
+            <b>8</b>
+            <b>9</b>
+            <b>10</b>
+            <b>11</b>
+            <b>12</b>
+            <b>13</b>
+            <b>14</b>
+            <b>15</b>
+            <b>16</b>
+            <b>17</b>
+            <b>18</b>
+            <b>19</b>
+            <b>20</b>
+            <b>21</b>
+            <b>22</b>
+            <b>23</b>
+            <b>24</b>
+            <b>25</b>
+            <b>26</b>
+            <b>27</b>
+            <b>28</b>
+            <b>29</b>
+            <b>30</b>
+            <b class="muted-date">1</b>
+            <b class="muted-date">2</b>
+            <b class="muted-date">3</b>
+            <b class="muted-date">4</b>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neil's Pet Cafe Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="admin-body">
+    <main class="admin-app admin-page">
+      <aside class="admin-sidebar">
+        <a class="admin-brand" href="admin.html">
+          <span class="brand-logo-wrap"><img src="assets/logo.png" alt="" /></span>
+          <span>NEIL'S PET<br />CAFE</span>
+        </a>
+
+        <nav class="admin-nav" aria-label="Admin navigation">
+          <a class="active" href="admin.html">Dashboard</a>
+          <a href="admin-users.html">User Management</a>
+          <a href="admin-records.html">System Records</a>
+          <a href="admin-approvals.html">Approvals</a>
+          <a href="admin-reports.html">Reports</a>
+          <a href="admin-settings.html">Settings</a>
+        </nav>
+
+        <section class="admin-profile" aria-label="Admin profile">
+          <img src="assets/user-pfp.png" alt="" />
+          <div>
+            <strong>ADMIN</strong>
+            <span>Johndoe@gmail.com</span>
+            <a href="profile.html">Edit profile</a>
+            <a href="index.html">LOGOUT</a>
+          </div>
+        </section>
+      </aside>
+
+      <section class="admin-workspace admin-board">
+        <header class="admin-page-header">
+          <h1>Dashboard</h1>
+          <button class="admin-bell" aria-label="Notifications"></button>
+        </header>
+
+        <section class="admin-page-content">
+          <section class="admin-kpis">
+            <article>
+              <span>Total users:</span>
+              <strong>1284</strong>
+              <small>+12 this week</small>
+            </article>
+            <article>
+              <span>Active users:</span>
+              <strong>1091</strong>
+              <small>84.7% active rate</small>
+            </article>
+            <article>
+              <span>Pending requests:</span>
+              <strong>23</strong>
+              <small>↑ 8 than yesterday</small>
+            </article>
+            <article>
+              <span>Approval Queue:</span>
+              <strong>5</strong>
+              <small>Pending</small>
+            </article>
+          </section>
+
+          <section class="admin-dashboard-grid">
+            <article class="admin-card dashboard-approval-card">
+              <div class="admin-card-head">
+                <h2>Approval Queue</h2>
+                <span>5 Pending</span>
+              </div>
+              <div class="approval-row">
+                <b>DD</b>
+                <p><strong>Deni Dela Cruz</strong><small>Reservation · Apr 20 · 2:00PM · 3 Guests</small></p>
+                <button type="button" data-admin-action="approve">Approve</button>
+                <button type="button" data-admin-action="reject">Reject</button>
+              </div>
+              <div class="approval-row">
+                <b>RC</b>
+                <p><strong>Ronah Joy Calamares</strong><small>Reservation · Apr 20 · 4:30PM · 2 Guests</small></p>
+                <button type="button" data-admin-action="approve">Approve</button>
+                <button type="button" data-admin-action="reject">Reject</button>
+              </div>
+              <div class="approval-row">
+                <b>HD</b>
+                <p><strong>Haven Joy Day Hola</strong><small>Reservation · Apr 21 · 11:00AM · 5 Guests</small></p>
+                <button type="button" data-admin-action="approve">Approve</button>
+                <button type="button" data-admin-action="reject">Reject</button>
+              </div>
+            </article>
+
+            <article class="admin-card chart-card">
+              <div class="admin-card-head">
+                <h2>Daily Reservations</h2>
+                <button type="button" data-admin-action="export">Export PDF</button>
+              </div>
+              <div class="monthly-bars dashboard-bars">
+                <i style="--h:58%">32</i>
+                <i style="--h:45%">25</i>
+                <i style="--h:100%">55</i>
+                <i style="--h:87%">48</i>
+                <i style="--h:76%">42</i>
+              </div>
+              <div class="chart-labels"><span>Mon</span><span>Tues</span><span>Wed</span><span>Thurs</span><span>Fri</span></div>
+            </article>
+
+            <article class="admin-card recent-admin-activity">
+              <h2>Recent Activity</h2>
+              <p>Approved - Jane Dela Cruz (RES-487)<br /><small>Today · 9:14 AM</small></p>
+              <p>Rejected - Kevin Tan (RES-486)<br /><small>Yesterday · 4:02 PM</small></p>
+              <p>Role granted - Maria Santos -> Admin<br /><small>May 14 · 11:00 AM</small></p>
+            </article>
+
+            <article class="admin-card history-card dashboard-table-card">
+              <div class="admin-card-head">
+                <h2>New Reservations</h2>
+                <a class="admin-card-link" href="admin-approvals.html">View approvals</a>
+              </div>
+              <table class="admin-data-table">
+                <thead>
+                  <tr><th>REQUEST ID</th><th>GUEST NAME</th><th>DATE & TIME</th><th>GUESTS</th><th>STATUS</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>#REQ-101</td><td>Lex Tsuki</td><td>Apr 17 · 2:00 PM</td><td>2</td><td><span class="badge approved">Approved</span></td></tr>
+                  <tr><td>#REQ-100</td><td>Juna Kimmy</td><td>May 16 · 3:00 PM</td><td>4</td><td><span class="badge rejected">Rejected</span></td></tr>
+                  <tr><td>#REQ-99</td><td>Rob Alucard</td><td>May 16 · 1:00 PM</td><td>5</td><td><span class="badge pending">Pending</span></td></tr>
+                </tbody>
+              </table>
+            </article>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
