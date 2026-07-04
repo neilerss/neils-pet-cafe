@@ -3,6 +3,17 @@ const registerScreen = document.querySelector("#register-screen");
 const screenButtons = document.querySelectorAll("[data-screen]");
 const authForms = document.querySelectorAll(".auth-form");
 
+// Demo credentials (front-end only)
+const ADMIN_CREDENTIALS = {
+  email: "admin@petcafe.com",
+  password: "admin123"
+};
+
+const DEMO_USER_CREDENTIALS = {
+  email: "user@petcafe.com",
+  password: "user123"
+};
+
 screenButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const shouldShowRegister = button.dataset.screen === "register";
@@ -15,7 +26,46 @@ screenButtons.forEach((button) => {
 authForms.forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    window.location.href = "dashboard.html";
+    
+    const isLoginForm = form.closest("#login-screen");
+    
+    if (isLoginForm) {
+      const email = document.querySelector("#login-email").value;
+      const password = document.querySelector("#login-password").value;
+      
+      // Check admin credentials
+      if (email === ADMIN_CREDENTIALS.email && password === ADMIN_CREDENTIALS.password) {
+        localStorage.setItem("userRole", "admin");
+        localStorage.setItem("userEmail", email);
+        window.location.href = "admin.html";
+      }
+      // Check regular user credentials
+      else if (email === DEMO_USER_CREDENTIALS.email && password === DEMO_USER_CREDENTIALS.password) {
+        localStorage.setItem("userRole", "user");
+        localStorage.setItem("userEmail", email);
+        window.location.href = "dashboard.html";
+      }
+      // Generic user registration
+      else if (email && password) {
+        localStorage.setItem("userRole", "user");
+        localStorage.setItem("userEmail", email);
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Invalid email or password");
+      }
+    } else {
+      // Registration form
+      const name = document.querySelector("#name").value;
+      const email = document.querySelector("#email").value;
+      const password = document.querySelector("#password").value;
+      
+      if (name && email && password) {
+        localStorage.setItem("userRole", "user");
+        localStorage.setItem("userName", name);
+        localStorage.setItem("userEmail", email);
+        window.location.href = "dashboard.html";
+      }
+    }
   });
 });
 
