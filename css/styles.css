@@ -213,66 +213,6 @@ form .forgot-link:focus-visible {
   text-shadow: 0 7px 1px rgba(0, 0, 0, 0.14);
 }
 
-.paw {
-  position: absolute;
-  width: 74px;
-  height: 66px;
-  opacity: 0.95;
-}
-
-.paw::before {
-  content: "";
-  position: absolute;
-  left: 24%;
-  top: 38%;
-  width: 42%;
-  height: 44%;
-  border-radius: 48% 50% 42% 44%;
-  background: var(--paw);
-  transform: rotate(-20deg);
-}
-
-.paw::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 19% 35%, var(--paw) 0 10%, transparent 11%),
-    radial-gradient(ellipse at 38% 15%, var(--paw) 0 10%, transparent 11%),
-    radial-gradient(ellipse at 59% 20%, var(--paw) 0 10%, transparent 11%),
-    radial-gradient(ellipse at 77% 43%, var(--paw) 0 10%, transparent 11%);
-}
-
-.paw-top {
-  top: 78px;
-  left: -10px;
-  transform: rotate(18deg);
-}
-
-.paw-left {
-  top: 256px;
-  left: -18px;
-  transform: rotate(-8deg);
-}
-
-.paw-middle {
-  right: 132px;
-  bottom: 96px;
-  transform: rotate(24deg);
-}
-
-.paw-bottom {
-  top: 472px;
-  left: 124px;
-  transform: rotate(8deg);
-}
-
-.paw-corner {
-  right: -20px;
-  bottom: -12px;
-  transform: rotate(-12deg);
-}
-
 .pet-cafe-icon {
   position: relative;
   width: 112px;
@@ -1038,60 +978,6 @@ form .forgot-link:focus-visible {
   background: #ded0bf;
 }
 
-.dash-paw {
-  position: absolute;
-  width: 94px;
-  height: 84px;
-  opacity: 0.95;
-}
-
-.dash-paw::before {
-  content: "";
-  position: absolute;
-  left: 24%;
-  top: 38%;
-  width: 42%;
-  height: 44%;
-  border-radius: 48% 50% 42% 44%;
-  background: var(--paw);
-  transform: rotate(-20deg);
-}
-
-.dash-paw::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 19% 35%, var(--paw) 0 10%, transparent 11%),
-    radial-gradient(ellipse at 38% 15%, var(--paw) 0 10%, transparent 11%),
-    radial-gradient(ellipse at 59% 20%, var(--paw) 0 10%, transparent 11%),
-    radial-gradient(ellipse at 77% 43%, var(--paw) 0 10%, transparent 11%);
-}
-
-.dash-paw-one {
-  top: 102px;
-  left: 0;
-  transform: rotate(13deg);
-}
-
-.dash-paw-two {
-  top: 244px;
-  left: 110px;
-  transform: rotate(-8deg);
-}
-
-.dash-paw-three {
-  right: 145px;
-  bottom: -8px;
-  transform: rotate(10deg);
-}
-
-.dash-paw-four {
-  right: -18px;
-  bottom: 72px;
-  transform: rotate(-15deg);
-}
-
 .function-panel {
   border-top: 10px solid #f6f6f6;
   background: #f6f6f6;
@@ -1571,54 +1457,6 @@ form .forgot-link:focus-visible {
 
 .muted-date {
   color: #b58376;
-}
-
-.res-paw {
-  position: absolute;
-  width: 130px;
-  height: 116px;
-  opacity: 0.95;
-}
-
-.res-paw::before {
-  content: "";
-  position: absolute;
-  left: 24%;
-  top: 38%;
-  width: 42%;
-  height: 44%;
-  border-radius: 48% 50% 42% 44%;
-  background: var(--paw);
-  transform: rotate(-20deg);
-}
-
-.res-paw::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 19% 35%, var(--paw) 0 10%, transparent 11%),
-    radial-gradient(ellipse at 38% 15%, var(--paw) 0 10%, transparent 11%),
-    radial-gradient(ellipse at 59% 20%, var(--paw) 0 10%, transparent 11%),
-    radial-gradient(ellipse at 77% 43%, var(--paw) 0 10%, transparent 11%);
-}
-
-.res-paw-one {
-  top: 245px;
-  left: -20px;
-  transform: rotate(17deg);
-}
-
-.res-paw-two {
-  top: 510px;
-  left: 28px;
-  transform: rotate(-12deg);
-}
-
-.res-paw-three {
-  right: -22px;
-  bottom: -9px;
-  transform: rotate(-9deg);
 }
 
 .simple-main {
