@@ -17,6 +17,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: List repository contents
+        run: |
+          pwd
+          ls -la
+          find . -maxdepth 2 | sort
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
