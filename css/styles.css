@@ -939,9 +939,7 @@ form .forgot-link:focus-visible {
 
 .menu-preview {
   display: block;
-  width: clamp(120px, 14vw, 172px);
-  background: transparent;
-  padding: 0;
+    width: clamp(180px, 60vw, 420px);
   text-decoration: none;
   box-shadow: none;
 }
@@ -1100,9 +1098,21 @@ form .forgot-link:focus-visible {
   .feature-cards {
     grid-template-columns: 1fr;
     width: 100%;
-    max-width: 360px;
-    margin: 28px auto 0;
+    max-width: 420px;
+    margin: 20px auto 0;
     gap: 16px;
+    justify-items: center;
+  }
+
+  .feature-card,
+  .menu-preview {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .menu-preview {
+    display: block;
+    margin: 0 auto;
   }
 
   .feature-card {
