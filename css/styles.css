@@ -1168,6 +1168,128 @@ form .forgot-link:focus-visible {
   }
 }
 
+@media (max-width: 700px) {
+  .dashboard-main {
+    grid-template-rows: auto auto;
+  }
+
+  .topbar {
+    flex-wrap: wrap;
+    align-items: center;
+    height: auto;
+    padding: 14px 16px;
+    gap: 10px;
+  }
+
+  .search-wrap {
+    order: 1;
+    width: 100%;
+  }
+
+  .alert-button {
+    order: 2;
+  }
+
+  .dashboard-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+    padding: 24px 16px 32px;
+  }
+
+  .welcome-copy {
+    margin: 0 0 12px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .welcome-copy h1 {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .cat-illustration {
+    display: none;
+  }
+
+  .dashboard-cat-image {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: min(200px, 70vw);
+    margin: 8px 0 0;
+  }
+
+  .feature-cards {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 320px;
+    margin: 24px 0 0;
+    gap: 12px;
+  }
+
+  .feature-card {
+    min-height: 82px;
+    padding: 16px;
+  }
+
+  .function-panel {
+    padding: 14px 16px 20px;
+  }
+
+  .reservation-main {
+    padding: 70px 12px 24px;
+  }
+
+  .page-back-button {
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 34px;
+  }
+
+  .reservation-card {
+    min-height: auto;
+    padding: 18px 16px 20px;
+  }
+
+  .reservation-card h1 {
+    margin: 0 0 24px;
+    font-size: clamp(26px, 7vw, 34px);
+  }
+
+  .reservation-form {
+    gap: 16px;
+  }
+
+  .reservation-form input,
+  .reservation-form select,
+  .required-field {
+    height: 40px;
+  }
+
+  .calendar-card {
+    margin-top: 14px;
+    padding: 12px 10px;
+  }
+
+  .calendar-toolbar {
+    grid-template-columns: 24px 1fr 1fr 24px;
+    gap: 6px;
+  }
+
+  .calendar-toolbar button {
+    font-size: 24px;
+  }
+
+  .calendar-grid {
+    gap: 8px 8px;
+    padding: 14px 10px;
+  }
+}
+
 @media (max-width: 1100px) {
   .admin-app {
     grid-template-columns: 220px 1fr;
