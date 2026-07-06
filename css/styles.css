@@ -939,9 +939,7 @@ form .forgot-link:focus-visible {
 
 .menu-preview {
   display: block;
-    width: clamp(180px, 60vw, 420px);
-  text-decoration: none;
-  box-shadow: none;
+    width: clamp(120px, 14vw, 172px);
 }
 
 .menu-preview img {
@@ -1104,7 +1102,11 @@ form .forgot-link:focus-visible {
     justify-items: center;
   }
 
-  .feature-card,
+  .feature-card {
+    width: 100%;
+    max-width: 420px;
+  }
+
   .menu-preview {
     width: 100%;
     max-width: 420px;
