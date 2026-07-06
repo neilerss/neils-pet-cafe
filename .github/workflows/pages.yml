@@ -23,10 +23,22 @@ jobs:
           ls -la
           find . -maxdepth 2 | sort
 
+      - name: Prepare Pages build
+        run: |
+          rm -rf ./.pages_build || true
+          mkdir ./.pages_build
+          rsync -av --exclude='.git' --exclude='.github' --exclude='.vscode' --exclude='node_modules' ./ ./.pages_build/
+
+      - name: List build contents
+        run: |
+          echo "Build folder listing:"
+          ls -la ./.pages_build
+          find ./.pages_build -maxdepth 2 | sort
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: .
+          path: ./.pages_build
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
