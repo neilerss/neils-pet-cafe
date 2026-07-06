@@ -997,58 +997,121 @@ form .forgot-link:focus-visible {
 }
 
 @media (max-width: 820px) {
-  .dashboard-app {
-    grid-template-columns: 1fr;
-  }
-
-  .sidebar {
-    min-height: 0;
-  }
-
-  .side-nav {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin-top: 24px;
-  }
-
-  .topbar {
-    padding-left: 18px;
-  }
-
-  .welcome-copy {
-    margin-left: 56px;
-  }
-
-  .cat-illustration {
-    left: auto;
-    right: 28px;
-  }
-
-  .dashboard-cat-image {
-    left: auto;
-    right: 28px;
-    width: 145px;
-  }
-
-  .feature-cards {
-    grid-template-columns: 1fr;
-    width: 220px;
-    gap: 16px;
-    margin-top: 120px;
-  }
-}
-
-@media (max-width: 900px) {
+  .dashboard-app,
   .reservation-app {
     grid-template-columns: 1fr;
   }
 
+  .sidebar,
   .reservation-sidebar {
+    min-height: auto;
+    width: 100%;
+    padding: 18px 18px 16px;
+  }
+
+  .sidebar-brand,
+  .reservation-brand {
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 20px;
+  }
+
+  .reservation-brand {
+    font-size: 28px;
+  }
+
+  .reservation-brand .brand-logo-wrap,
+  .brand-logo-wrap {
+    width: 50px;
+    height: 50px;
+  }
+
+  .side-nav,
+  .reservation-nav {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .sidebar-profile,
+  .reservation-profile {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .sidebar-profile img,
+  .reservation-profile img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .sidebar-footer,
+  .reservation-footer {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .topbar {
+    flex-wrap: wrap;
+    align-items: center;
+    height: auto;
+    padding: 14px 18px 12px;
+    gap: 10px;
+  }
+
+  .search-wrap {
+    width: 100%;
+  }
+
+  .alert-button {
+    margin-left: auto;
+  }
+
+  .welcome-copy {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+  }
+
+  .welcome-copy h1 {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .cat-illustration {
+    display: none;
+  }
+
+  .dashboard-cat-image {
+    position: relative;
+    left: auto;
+    right: auto;
+    width: min(260px, 72vw);
+    margin: 0 auto;
+  }
+
+  .dashboard-stage {
+    padding: 28px 18px 32px;
     min-height: auto;
   }
 
-  .reservation-nav {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin-top: 24px;
+  .feature-cards {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 360px;
+    margin: 28px auto 0;
+    gap: 16px;
+  }
+
+  .feature-card {
+    min-height: 80px;
+    padding: 18px;
+  }
+
+  .dashboard-main {
+    min-height: auto;
   }
 
   .reservation-main,
@@ -1068,31 +1131,50 @@ form .forgot-link:focus-visible {
 
   .form-row {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 14px;
   }
 
   .reservation-form input,
   .reservation-form select,
-  .required-field {
+  .required-field,
+  .calendar-toolbar input {
     width: 100%;
+  }
+
+  .reservation-form {
+    gap: 18px;
   }
 
   .reserve-submit {
     justify-self: stretch;
     width: 100%;
+    padding: 14px;
+    font-size: 16px;
   }
 
   .calendar-card {
     padding: 16px 14px;
+    margin-top: 18px;
+  }
+
+  .calendar-toolbar {
+    grid-template-columns: 24px 1fr 1fr 24px;
+    gap: 8px;
+  }
+
+  .calendar-toolbar button {
+    font-size: 24px;
   }
 
   .calendar-grid {
     grid-template-columns: repeat(7, minmax(0, 1fr));
     width: 100%;
+    gap: 8px;
+    padding: 14px 10px;
   }
 
   .pets-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 18px;
   }
 
@@ -1103,10 +1185,57 @@ form .forgot-link:focus-visible {
   .announcements-board,
   .activity-list {
     margin-left: 0;
+    max-width: none;
   }
 
   .board-main {
     padding: 28px 18px 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar-brand,
+  .reservation-brand {
+    font-size: 22px;
+  }
+
+  .sidebar-profile,
+  .reservation-profile {
+    justify-content: center;
+  }
+
+  .sidebar-footer,
+  .reservation-footer {
+    font-size: 12px;
+  }
+
+  .reservation-main {
+    padding: 18px 14px 26px;
+  }
+
+  .page-back-button {
+    top: 12px;
+    left: 12px;
+    width: 42px;
+    height: 42px;
+    font-size: 34px;
+  }
+
+  .reservation-card h1 {
+    margin-bottom: 24px;
+    font-size: clamp(26px, 8vw, 34px);
+  }
+
+  .reservation-card {
+    padding: 18px 16px 22px;
+  }
+
+  .calendar-card {
+    padding: 12px 10px;
+  }
+
+  .feature-cards {
+    margin-top: 22px;
   }
 }
 
