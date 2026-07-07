@@ -405,7 +405,7 @@ form .forgot-link:focus-visible {
   width: 100vw;
   min-height: 100vh;
   background: var(--cream);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .dashboard-app.reservation-app {
@@ -792,43 +792,40 @@ form .forgot-link:focus-visible {
 .dashboard-stage {
   position: relative;
   min-height: calc(100vh - 82px);
-  overflow: hidden;
-  padding: 118px clamp(28px, 6vw, 76px) 56px;
+  overflow: visible;
+  padding: 80px clamp(20px, 5vw, 60px) 40px;
   background:
     linear-gradient(rgba(254, 236, 203, 0.78), rgba(254, 236, 203, 0.78)),
-    url("../assets/paw-background.png") left 132px / min(760px, 72vw) auto repeat;
+    url("/assets/paw-background.png") center / min(600px, 70vw) auto repeat;
 }
 .welcome-copy {
   position: relative;
   z-index: 2;
-  margin-left: clamp(48px, 13vw, 210px);
-  width: 270px;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
 }
 
 .welcome-copy h1 {
   margin: 0;
   color: var(--black);
-  font-size: clamp(34px, 4vw, 55px);
+  font-size: clamp(32px, 5vw, 52px);
   font-weight: 900;
   line-height: 1.06;
 }
 
-.cat-illustration {
-  position: absolute;
-  top: 58px;
-  left: 500px;
-  width: 135px;
-  height: 230px;
+.dashboard-cat-image {
+  position: relative;
   z-index: 2;
+  display: block;
+  width: clamp(140px, 20vw, 260px);
+  height: auto;
+  margin: 12px auto 0;
 }
 
-.dashboard-cat-image {
-  position: absolute;
-  top: 74px;
-  left: min(58vw, 760px);
-  z-index: 2;
-  width: clamp(180px, 24vw, 310px);
-  height: auto;
+.cat-illustration {
+  display: none;
 }
 
 .cat-body {
@@ -907,38 +904,42 @@ form .forgot-link:focus-visible {
 }
 
 .feature-cards {
-    position: relative;
-    z-index: 3;
-    display: grid;
-    grid-template-columns: clamp(140px, 16vw, 190px) clamp(125px, 14vw, 175px) clamp(140px, 16vw, 190px);
-    align-items: end;
-    gap: clamp(22px, 4vw, 54px);
-    width: max-content;
-    margin: clamp(120px, 20vh, 210px) auto 0;
-  }
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* was fixed clamp values */
+  align-items: end;
+  gap: clamp(16px, 3vw, 40px);
+  width: 100%; /* was 'max-content' — caused overflow */
+  max-width: 640px;
+  margin: clamp(60px, 12vh, 160px) auto 0;
+}
 
   .feature-card {
-    min-height: clamp(82px, 12vh, 116px);
-    border: 0;
-    border-radius: 5px;
-    background: var(--brown);
-    color: #fff7eb;
-    cursor: pointer;
-    padding: 20px 16px;
-    text-align: left;
-    font-size: clamp(13px, 1.7vw, 20px);
-    font-weight: 900;
-    line-height: 1;
-  }
+  min-height: clamp(76px, 10vh, 110px);
+  border: 0;
+  border-radius: 5px;
+  background: var(--brown);
+  color: #fff7eb;
+  cursor: pointer;
+  padding: 18px 14px;
+  text-align: center; /* was 'left' */
+  font-size: clamp(13px, 1.6vw, 19px);
+  font-weight: 900;
+  line-height: 1.1;
+  transition: background 0.2s;
+}
 
   .feature-card:hover,
   .feature-card:focus-visible {
-    background: #8b2417;
-  }
+  background: #8b2417;
+}
 
 .menu-preview {
   display: block;
-  width: clamp(120px, 14vw, 172px);
+  width: 100%;
+  max-width: 180px;
+  margin: 0 auto;
   filter: drop-shadow(0 6px 2px rgba(0, 0, 0, 0.15));
 }
 
